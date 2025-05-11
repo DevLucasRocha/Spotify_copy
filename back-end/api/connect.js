@@ -4,7 +4,7 @@
 import { MongoClient } from "mongodb";
 
 const URI =
-  "mongodb+srv://LucasRocha:@cluster0.jmvfm9o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://devlucasrocha:9804DiMqjGq6ln0N@projetos-academicos.gpriyp3.mongodb.net/?retryWrites=true&w=majority&appName=Projetos-academicos";
 
 const client = new MongoClient(URI);
 
