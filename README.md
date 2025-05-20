@@ -1,22 +1,15 @@
-# 👋 Seja Bem-vindo 
-# Eu sou Lucas Rocha e lhe apresento este projeto: &#x1F604;!
+# 🎧 Spotify Copy
 
-🎧 Spotify Clone - Front-End
+Este projeto é uma réplica visual da interface do Spotify, criada com o objetivo de praticar desenvolvimento front-end moderno com React e CSS. A proposta é entregar uma interface intuitiva, responsiva e organizada, simulando a navegação básica da plataforma original.
 
-Este projeto é uma **réplica do front-end da interface do Spotify**, desenvolvida com foco em aprimorar habilidades com **React.js**, **CSS moderno** e boas práticas de organização de componentes e estilos.
+## 🚀 Tecnologias Utilizadas
 
-O objetivo é entregar uma experiência visual semelhante à da plataforma original, explorando a estrutura de listas de artistas, músicas e navegação simples.
-
----
-
-## 🚀 Tecnologias utilizadas
-
-- **React.js** – Biblioteca JavaScript para construção da interface
-- **Vite** – Ferramenta moderna para bundling e desenvolvimento com React
-- **JavaScript (ES6+)** – Lógica e componentes
-- **CSS3 (custom properties + BEM)** – Estilização completa com responsividade e sem frameworks
-- **Font Awesome** – Ícones interativos (como o botão de "play")
-- **Estrutura de componentes reutilizáveis** – `Header`, `Main`, `ItemList`, `SingleItem`, entre outros
+- **React.js** – Biblioteca JavaScript para construção da interface;
+- **Vite** – Ferramenta de bundling e dev server para projetos modernos;
+- **JavaScript (ES6+)** – Linguagem principal usada na lógica e estrutura dos componentes;
+- **CSS3** – Estilização completa e responsiva da aplicação;
+- **Font Awesome** – Biblioteca de ícones usada para elementos visuais como o botão de play;
+- **Componentização** – Organização da interface em partes reutilizáveis e de fácil manutenção.
 
 <h3>💼 Estudante de engenheira de Software | 🚀 Apaixonado por Tecnologia e Inovação </h3>
 ---
