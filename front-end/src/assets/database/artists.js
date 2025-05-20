@@ -127,5 +127,3 @@ export const artistArray = [
     },
 
 ];
-
-export { artistArray };

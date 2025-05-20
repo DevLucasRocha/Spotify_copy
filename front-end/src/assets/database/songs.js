@@ -1720,5 +1720,3 @@ export const songsArray = [
     id: 200,
   },
 ];
-
-export { songsArray };
