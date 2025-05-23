@@ -1,4 +1,3 @@
-import db from './connect.js';
 import { MongoClient } from "mongodb";
 
 const URI =
