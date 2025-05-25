@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchArtists } from "../api/api";
+import { fetchArtists } from "../../api/api";
 import ItemList from "../components/ItemList";
 
 const Artists = () => {
