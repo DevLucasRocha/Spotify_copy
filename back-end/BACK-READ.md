@@ -1,14 +1,18 @@
-# Backend - Spotify Copy
+# Back-end
 
-Esta pasta contém o backend do projeto **Spotify Copy**, responsável por fornecer a API para o frontend.
+Responsável pela API e conexão com o banco de dados.
 
-## Estrutura da pasta
+## Estrutura
 
-- `api/connect.js`: configura a conexão com o banco de dados.
-- `api/insertMany.js`: script para inserir dados iniciais no banco.
-- `api/server.js`: arquivo principal que inicia o servidor e define as rotas da API.
-- `node_modules/`: dependências instaladas.
-- `package.json` e `package-lock.json`: arquivos de gerenciamento de pacotes e scripts.
+```
+back-end/
+├── api/
+│   ├── connect.js         # Conexão com o MongoDB Atlas
+│   ├── insertMany.js      # Script para inserir dados iniciais
+│   └── server.js          # Servidor Express e rotas da API
+├── package.json           # Dependências e scripts do backend
+└── BACK-READ.md           # Este arquivo de explicação
+```
 
 ## Como rodar
 

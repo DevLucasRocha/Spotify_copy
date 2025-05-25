@@ -1,4 +1,4 @@
-# Frontend - Spotify Copy
+# Frontend
 
 Esta pasta contém o frontend do projeto **Spotify Copy**, responsável pela interface do usuário e pela interação com a API backend para exibir músicas, artistas e outras funcionalidades.
 
@@ -12,11 +12,11 @@ Esta pasta contém o frontend do projeto **Spotify Copy**, responsável pela int
     - `database/`: arquivos locais de dados como `artists.js` e `songs.js`
     - `logo/`: logos e imagens da aplicação
   - `components/`: componentes React reutilizáveis como `Header.jsx`, `Player.jsx`, `SongList.jsx` etc.
-  - `pages/`: páginas do aplicativo (ex: `App.jsx`)
+  - `pages/`: páginas do aplicativo (ex: `Home.jsx`, `Artists.jsx`, `Songs.jsx`, `Artist.jsx`, `Song.jsx`)
   - Arquivos CSS: `index.css`, `index-aula.css`
-  - Arquivos principais: `main.jsx` (entrada do app React)
+  - Arquivos principais: `App.jsx` e `main.jsx` (entrada do app React)
 - Arquivos de configuração e dependências:
-  - `package.json`, `package-lock.json`
+  - `package.json`
   - `vite.config.js`
   - `.gitignore`
   - `eslint.config.js`
@@ -63,5 +63,5 @@ Esta pasta contém o frontend do projeto **Spotify Copy**, responsável pela int
 
 - Interface desenvolvida em React com navegação via React Router Dom.
 - Componentes organizados para modularidade e fácil manutenção.
-- Consumo de API backend para dados dinâmicos (via `api/api.js`).
+- Consumo de API backend para dados dinâmicos (via `api/api.js` e Axios).
 - Player de músicas, listas de artistas e canções com interação dinâmica.
