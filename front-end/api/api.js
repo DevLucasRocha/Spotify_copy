@@ -1,7 +1,7 @@
 // Fetch ou Axios
 import axios from "axios";
 
-const URL = "http://localhost:3001";
+const URL = "https://spotify-backend-q87w.onrender.com";
 
 export async function fetchArtists() {
   try {
