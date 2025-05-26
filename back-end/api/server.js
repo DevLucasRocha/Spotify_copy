@@ -11,9 +11,10 @@ import { db } from "./connect.js";
 const app = express();
 const PORT = 3001;
 
-app.use(cors({ origin: 
+app.use(cors({ origin: [
     "https://spotify-web-copy.netlify.app",
-    "https://project-spotifyweb.netlify.app" }));
+    "https://project-spotifyweb.netlify.app" 
+  ] })); 
 
 app.get("/", (request, response) => {
   response.send("Só vamos trabalhar com os endpoints '/artists' e '/songs'");
