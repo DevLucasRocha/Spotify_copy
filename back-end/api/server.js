@@ -6,11 +6,13 @@
 
 import express from "express";
 import cors from "cors";
+import compression from "compression";
 import { db } from "./connect.js";
 
 const app = express();
 const PORT = 3001;
 
+app.use(compression()); // serve para compactar o conteúdo
 app.use(cors({ origin: [
     "https://spotify-web-copy.netlify.app",
     "https://project-spotifyweb.netlify.app" 
