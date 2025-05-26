@@ -21,7 +21,7 @@ Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
 
 - React.js
 - Vite
-- JavaScript (ES6+)
+- JavaScript (ES7+)
 - CSS3
 - Node.js & Express
 - MongoDB Atlas
