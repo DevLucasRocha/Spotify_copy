@@ -13,6 +13,7 @@ const SingleItem = ({ _id, name, image, banner, artist, idPath }) => {
             className="single-item__image"
             src={image}
             alt={`Imagem do Artista ${name}`}
+            loading="lazy"
           />
         </div>
 

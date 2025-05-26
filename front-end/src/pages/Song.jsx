@@ -46,7 +46,11 @@ const Song = () => {
     <div className="song">
       <div className="song__container">
         <div className="song__image-container">
-          <img src={song.image} alt={`Imagem da música ${song.name}`} />
+          <img 
+          src={song.image} 
+          alt={`Imagem da música ${song.name}`} 
+          loading="lazy"
+          />
         </div>
       </div>
 
@@ -57,6 +61,7 @@ const Song = () => {
             height={75}
             src={artistObj.image}
             alt={`Imagem do Artista ${song.artist}`}
+            loading="lazy"
           />
         </Link>
 
