@@ -1,32 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import SongItem from "./SongItem";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SongList = ({ songsArray }) => {
-  // const items = 5;
   const [items, setItems] = useState(5);
-
-  // items = 10
-  // setItems(10)
-
-  // console.log(items);
-  // items +=  5
 
   return (
     <div className="song-list">
       {songsArray
         .filter((currentValue, index) => index < items)
         .map((currentSongObj, index) => (
-          <SongItem {...currentSongObj} index={index} key={index} />
+          <Link
+            to={`/song/${currentSongObj._id || currentSongObj.id}`}
+            key={currentSongObj._id || currentSongObj.id}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <SongItem {...currentSongObj} index={index} />
+          </Link>
         ))}
 
       <p
         className="song-list__see-more"
-        onClick={() => {
-          setItems(items + 5);
-          // items += 5;
-          // console.log(items);
-        }}
+        onClick={() => setItems(items + 5)}
       >
         Ver mais
       </p>
