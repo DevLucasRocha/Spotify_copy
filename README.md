@@ -1,4 +1,4 @@
-# 🎧 Spotify Copy
+# 🎧 Spotify copy
 
 Este projeto é uma réplica visual e funcional da interface do Spotify, desenvolvida para praticar e consolidar conhecimentos em desenvolvimento web moderno, tanto no front-end quanto no back-end. O objetivo foi criar uma experiência de navegação fluida, responsiva e organizada, simulando funcionalidades reais como listagem de músicas, artistas e player interativo.
 
