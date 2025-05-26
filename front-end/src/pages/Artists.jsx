@@ -14,7 +14,7 @@ const Artists = () => {
         setArtists(data);
         setError(null);
       } catch (err) {
-        setError("Erro ao carregar artistas.");
+        setError("Erro ao carregar artistas. Tente novamente mais tarde.");
       } finally {
         setLoading(false);
       }

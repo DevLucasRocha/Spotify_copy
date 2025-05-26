@@ -14,7 +14,7 @@ const Songs = () => {
         setSongs(data);
         setError(null);
       } catch (err) {
-        setError("Erro ao carregar músicas.");
+        setError("Erro ao carregar músicas. Tente novamente mais tarde.");
       } finally {
         setLoading(false);
       }
