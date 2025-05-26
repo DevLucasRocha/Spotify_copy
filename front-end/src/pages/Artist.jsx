@@ -12,7 +12,7 @@ const Artist = () => {
   useEffect(() => {
     async function load() {
       const artists = await fetchArtists();
-      const foundArtist = artists.find((a) => a._id === id);
+      const foundArtist = artists.find((a) => String(a._id || a.id) === String(id));
       setArtist(foundArtist);
 
       const allSongs = await fetchSongs();
