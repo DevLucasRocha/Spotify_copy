@@ -31,25 +31,19 @@ const Song = () => {
 
   if (!song || !artistObj) return <p>Carregando...</p>;
 
-  // Evita erro se houver só uma música do artista
-  const randomIndex = Math.floor(Math.random() * songsArrayFromArtist.length);
-  let randomIdFromArtist = songsArrayFromArtist[randomIndex]?._id || songsArrayFromArtist[randomIndex]?.id;
-
-  // Garante que não seja a mesma música
-  let randomIndex2 = randomIndex;
-  while (songsArrayFromArtist.length > 1 && randomIndex2 === randomIndex) {
-    randomIndex2 = Math.floor(Math.random() * songsArrayFromArtist.length);
-  }
-  let randomId2FromArtist = songsArrayFromArtist[randomIndex2]?._id || songsArrayFromArtist[randomIndex2]?.id;
+  // Encontra o índice da música atual na lista do artista
+  const currentIndex = songsArrayFromArtist.findIndex(
+    (s) => String(s._id || s.id) === String(id)
+  );
 
   return (
     <div className="song">
       <div className="song__container">
         <div className="song__image-container">
           <img 
-          src={song.image} 
-          alt={`Imagem da música ${song.name}`} 
-          loading="lazy"
+            src={song.image} 
+            alt={`Imagem da música ${song.name}`} 
+            loading="lazy"
           />
         </div>
       </div>
@@ -67,9 +61,9 @@ const Song = () => {
 
         <Player
           duration={song.duration}
-          randomIdFromArtist={randomIdFromArtist}
-          randomId2FromArtist={randomId2FromArtist}
           audio={song.audio}
+          songsArrayFromArtist={songsArrayFromArtist}
+          currentIndex={currentIndex}
         />
 
         <div>
