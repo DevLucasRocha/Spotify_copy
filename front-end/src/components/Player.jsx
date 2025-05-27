@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
+// Formata o tempo em mm:ss
 const formatTime = (timeInSeconds) => {
   const minutes = Math.floor(timeInSeconds / 60)
     .toString()
@@ -18,7 +19,9 @@ const formatTime = (timeInSeconds) => {
   return `${minutes}:${seconds}`;
 };
 
+// Converte string "mm:ss" para segundos
 const timeInSeconds = (timeString) => {
+  if (!timeString) return 0;
   const splitArray = timeString.split(":");
   const minutes = Number(splitArray[0]);
   const seconds = Number(splitArray[1]);
@@ -27,15 +30,36 @@ const timeInSeconds = (timeString) => {
 
 const Player = ({
   duration,
-  randomIdFromArtist,
-  randomId2FromArtist,
   audio,
+  songsArrayFromArtist = [],
+  currentIndex = 0,
 }) => {
   const audioPlayer = useRef();
   const progressBar = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const durationInSeconds = timeInSeconds(duration);
+
+  // Calcula o id da música anterior e próxima
+  const prevSongId =
+    songsArrayFromArtist.length > 0
+      ? songsArrayFromArtist[
+          (currentIndex - 1 + songsArrayFromArtist.length) %
+            songsArrayFromArtist.length
+        ]?._id || songsArrayFromArtist[
+          (currentIndex - 1 + songsArrayFromArtist.length) %
+            songsArrayFromArtist.length
+        ]?.id
+      : null;
+
+  const nextSongId =
+    songsArrayFromArtist.length > 0
+      ? songsArrayFromArtist[
+          (currentIndex + 1) % songsArrayFromArtist.length
+        ]?._id || songsArrayFromArtist[
+          (currentIndex + 1) % songsArrayFromArtist.length
+        ]?.id
+      : null;
 
   // Atualiza o tempo conforme a música toca
   useEffect(() => {
@@ -67,7 +91,7 @@ const Player = ({
     setIsPlaying(!isPlaying);
   };
 
-  // Atualiza barra de progresso
+  // Atualiza barra de progresso visual
   useEffect(() => {
     if (progressBar.current) {
       progressBar.current.style.setProperty(
@@ -86,8 +110,9 @@ const Player = ({
 
   return (
     <div className="player">
+      {/* Controles de navegação */}
       <div className="player__controllers">
-        <Link to={`/song/${randomIdFromArtist}`}>
+        <Link to={prevSongId ? `/song/${prevSongId}` : "#"}>
           <FontAwesomeIcon className="player__icon" icon={faBackwardStep} />
         </Link>
         <FontAwesomeIcon
@@ -95,11 +120,12 @@ const Player = ({
           icon={isPlaying ? faCirclePause : faCirclePlay}
           onClick={playPause}
         />
-        <Link to={`/song/${randomId2FromArtist}`}>
+        <Link to={nextSongId ? `/song/${nextSongId}` : "#"}>
           <FontAwesomeIcon className="player__icon" icon={faForwardStep} />
         </Link>
       </div>
 
+      {/* Barra de progresso */}
       <div className="player__progress">
         <p>{formatTime(currentTime)}</p>
         <div className="player__bar">
@@ -116,6 +142,7 @@ const Player = ({
         <p>{duration}</p>
       </div>
 
+      {/* Elemento de áudio */}
       <audio ref={audioPlayer} src={audio} />
     </div>
   );
