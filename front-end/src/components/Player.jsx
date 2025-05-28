@@ -78,6 +78,16 @@ const Player = ({
       audioPlayer.current.pause();
       audioPlayer.current.currentTime = 0;
     }
+    if (progressBar.current) {
+      progressBar.current.style.setProperty("--_progress", "0%");
+    }
+    // Pausa o áudio ao desmontar o componente (troca de página/música)
+    return () => {
+      if (audioPlayer.current) {
+        audioPlayer.current.pause();
+        audioPlayer.current.currentTime = 0;
+      }
+    };
   }, [audio]);
 
   // Play/Pause
