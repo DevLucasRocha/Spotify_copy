@@ -477,15 +477,20 @@ img {
   background-color: #666;
   border-radius: var(--border-radius-s);
   overflow: hidden;
+  position: relative;
 }
 
 .player__bar-progress {
-  --_progress: 0;
-
+  --_progress: 0%;
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
   width: var(--_progress);
-  background-color: white;
-  transition: width var(--transition-function) var(--transition-duration);
+  background: white;
+  border-radius: var(--border-radius-s);
+  transition: width 0.2s;
+  pointer-events: none;
 }
 
 @media (max-width: 1280px) {

@@ -13,7 +13,7 @@ Esta pasta contém o frontend do projeto **Spotify Copy**, responsável pela int
     - `logo/`: logos e imagens da aplicação
   - `components/`: componentes React reutilizáveis como `Header.jsx`, `Player.jsx`, `SongList.jsx` etc.
   - `pages/`: páginas do aplicativo (ex: `Home.jsx`, `Artists.jsx`, `Songs.jsx`, `Artist.jsx`, `Song.jsx`)
-  - Arquivos CSS: `index.css`, `index-aula.css`
+  - Arquivos CSS: `index.css`, `theme.css`
   - Arquivos principais: `App.jsx` e `main.jsx` (entrada do app React)
 - Arquivos de configuração e dependências:
   - `package.json`

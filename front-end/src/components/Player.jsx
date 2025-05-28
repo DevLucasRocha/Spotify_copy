@@ -96,7 +96,7 @@ const Player = ({
     if (progressBar.current) {
       progressBar.current.style.setProperty(
         "--_progress",
-        (currentTime / durationInSeconds) * 100 + "%"
+         `${(currentTime / durationInSeconds) * 100}%`
       );
     }
   }, [currentTime, durationInSeconds]);
